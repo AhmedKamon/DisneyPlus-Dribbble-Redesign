@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import {HomeIcon} from '@heroicons/react/solid'
+import {HomeIcon, PlusIcon, SearchIcon, StarIcon} from '@heroicons/react/solid'
 
 function Header() {
   return (
@@ -12,10 +12,30 @@ function Header() {
         className="cursor-pointer"
       />
 
-      <div className="">
+      <div className="ml-10 md:flex hidden items-center space-x-6  ">
         <a  className="header-link group">
           <HomeIcon className="h-4" />
           <span className='span'>Home</span>
+        </a>
+        <a  className="header-link group">
+          <SearchIcon className="h-4" />
+          <span className='span'>Search</span>
+        </a>
+        <a  className="header-link group">
+          <PlusIcon className="h-4" />
+          <span className='span'>Watchlist</span>
+        </a>
+        <a  className="header-link group">
+          <StarIcon className="h-4" />
+          <span className='span'>Originals</span>
+        </a>
+        <a  className="header-link group">
+          <img src='/images/movie-icon.svg' className='h-5' />
+          <span className='span'>Movies</span>
+        </a>
+        <a  className="header-link group">
+          <img src='/images/series-icon.svg' className='h-5' />
+          <span className='span'>Series</span>
         </a>
       </div>
     </div>
