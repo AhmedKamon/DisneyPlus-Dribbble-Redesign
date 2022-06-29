@@ -1,7 +1,13 @@
 import Image from 'next/image';
 import {HomeIcon, PlusIcon, SearchIcon, StarIcon} from '@heroicons/react/solid'
+import { useState } from 'react';
+import { useRouter } from 'next/router';
+
+
 
 function Header() {
+  const router = useRouter()
+  const [logedIn, setLogedIn] = useState(false)
   return (
     <div className="sticky bg-[#040714]  top-0 z-[1000] flex items-center h-[72px] px-10 md:px-12  ">
       <Image
@@ -10,9 +16,10 @@ function Header() {
         height={80}
         alt="disny logo"
         className="cursor-pointer"
+        onClick={() => router.push('/') }
       />
 
-      <div className="ml-10 md:flex hidden items-center space-x-6  ">
+      { logedIn && <div className="ml-10 md:flex hidden items-center space-x-6  ">
         <a  className="header-link group">
           <HomeIcon className="h-4" />
           <span className='span'>Home</span>
@@ -37,9 +44,15 @@ function Header() {
           <img src='/images/series-icon.svg' className='h-5' alt='' />
           <span className='span'>Series</span>
         </a>
-      </div>
+      </div>}
+      {
+        !logedIn ? (
+          <button className='ml-auto uppercase border px-4 py-1.5 rounded font-medium tracking-wide hover:bg-white hover:text-black transition duration-200 ' onClick={() =>setLogedIn(!logedIn)}  >Login</button>
+        ) : (
+          <img onClick={() =>setLogedIn(!logedIn)}  src='images/kamrul.jpg' alt='user image' className=' ml-auto h-12 w-12 rounded-full object-cover cursor-pointer ' />
+        )
+      }
 
-      <button className='ml-auto uppercase border px-4 py-1.5 rounded font-medium tracking-wide hover:bg-white hover:text-black transition duration-200 ' >Login</button>
     </div>
   );
 }
