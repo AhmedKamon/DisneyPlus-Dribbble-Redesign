@@ -5,11 +5,11 @@ import { useRouter } from 'next/router';
 
 
 
-function Header() {
+function Header({logedIn,setLogedIn}) {
   const router = useRouter()
-  const [logedIn, setLogedIn] = useState(false)
+ 
   return (
-    <div className="sticky bg-[#040714]  top-0 z-[1000] flex items-center h-[72px] px-10 md:px-12  ">
+    <header className="sticky bg-[#040714]  top-0 z-[1000] flex items-center h-[72px] px-10 md:px-12  ">
       <Image
         src="/images/logo.svg"
         width={80}
@@ -53,8 +53,9 @@ function Header() {
         )
       }
 
-    </div>
+    </header>
   );
 }
 
 export default Header;
+
