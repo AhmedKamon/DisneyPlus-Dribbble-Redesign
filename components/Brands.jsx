@@ -12,25 +12,25 @@ function Brands() {
             </div>
             <div className='brand group ' >
                 <Image src='/images/pixar.png' alt='brand image' layout='fill' objectFit='cover'  />
-                <video autoPlay loop playsInline className='hidden group-hover:inline rounded-lg object-cover md:w-screen' >
+                <video autoPlay loop playsInline className='hidden group-hover:inline rounded-lg object-cover w-screen' >
                     <source src="/videos/pixar.mp4" type='video/mp4' />
                 </video>
             </div>
             <div className='brand group ' >
                 <Image src='/images/marvel.png' alt='brand image' layout='fill' objectFit='cover'  />
-                <video autoPlay loop playsInline className='hidden group-hover:inline rounded-lg object-cover md:w-screen' >
+                <video autoPlay loop playsInline className='hidden group-hover:inline rounded-lg object-cover w-screen' >
                     <source src="/videos/marvel.mp4" type='video/mp4' />
                 </video>
             </div>
             <div className='brand group ' >
                 <Image src='/images/starwars.png' alt='brand image' layout='fill' objectFit='cover'  />
-                <video autoPlay loop playsInline className='hidden group-hover:inline rounded-lg object-cover md:w-screen' >
+                <video autoPlay loop playsInline className='hidden group-hover:inline rounded-lg object-cover w-screen' >
                     <source src="/videos/star-wars.mp4" type='video/mp4' />
                 </video>
             </div>
             <div className='brand group ' >
                 <Image src='/images/national-geographic.png' alt='brand image' layout='fill' objectFit='cover'  />
-                <video autoPlay loop playsInline className='hidden group-hover:inline rounded-lg object-cover md:w-screen' >
+                <video autoPlay loop playsInline className='hidden group-hover:inline rounded-lg object-cover w-screen' >
                     <source src="/videos/national-geographic.mp4" type='video/mp4' />
                 </video>
             </div>
