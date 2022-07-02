@@ -74,6 +74,7 @@ function Movie({ result }) {
               {Math.floor(result.runtime / 60)}h {result.runtime % 60}m .{' '}
               {result.genres.map((g) => g.name + ' ')}
             </p>
+            <h4 className="text-sm md:text-lg max-w-4xl">{result.overview}</h4>
           </div>
         </section>
       )}
