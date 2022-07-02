@@ -9,6 +9,7 @@ function Movie({ result }) {
   const BASE_URL = 'https://image.tmdb.org/t/p/original/';
   const [logedIn, setLogedIn] = useState(true);
   const [showPlayer, setShowPlayer] = useState(false);
+  console.log(result, 'result');
   return (
     <div>
       <Head>
@@ -68,7 +69,11 @@ function Movie({ result }) {
               </div>
             </div>
 
-            <p className="text-xs md:text-sm ">{}</p>
+            <p className="text-xs md:text-sm ">
+              {result.release_date || result.first_air_date} .{' '}
+              {Math.floor(result.runtime / 60)}h {result.runtime % 60}m .{' '}
+              {result.genres.map((g) => g.name + ' ')}
+            </p>
           </div>
         </section>
       )}
