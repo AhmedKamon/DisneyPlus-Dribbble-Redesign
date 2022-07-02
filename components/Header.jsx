@@ -49,7 +49,7 @@ function Header({logedIn,setLogedIn}) {
         !logedIn ? (
           <button className='ml-auto uppercase border px-4 py-1.5 rounded font-medium tracking-wide hover:bg-white hover:text-black transition duration-200 ' onClick={() =>setLogedIn(!logedIn)}  >Login</button>
         ) : (
-          <img onClick={() =>setLogedIn(!logedIn)}  src='images/kamrul.jpg' alt='user image' className=' ml-auto h-12 w-12 rounded-full object-cover cursor-pointer ' />
+          <img onClick={() =>setLogedIn(false)}  src='images/kamrul.jpg' alt='user image' className=' ml-auto h-12 w-12 rounded-full object-cover cursor-pointer ' />
         )
       }
 
