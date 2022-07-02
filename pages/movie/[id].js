@@ -1,3 +1,4 @@
+import { PlusIcon } from '@heroicons/react/solid';
 import Head from 'next/head';
 import Image from 'next/image';
 import React, { useState } from 'react';
@@ -46,17 +47,28 @@ function Movie({ result }) {
                   Play
                 </span>
               </button>
-              <button className=" text-xs md:text-base bg-black/30 border border-[#f9f9f9] text-[#f9f9f9] flex items-center  justify-center py-2.5  px-6 rounded space-x-2 hover:bg-[#c6c6c6] ">
+              <button
+                className=" text-xs md:text-base bg-black/30 border border-[#f9f9f9] text-[#f9f9f9] flex items-center  justify-center py-2.5  px-6 rounded space-x-2 hover:bg-[#c6c6c6] "
+                onClick={() => setShowPlayer(true)}
+              >
                 <img
                   className="h-6 md:h-8 "
-                  src="/images/play-icon-black.svg"
+                  src="/images/play-icon-white.svg"
                   alt=""
                 />
                 <span className="uppercase font-medium tracking-wide ">
                   Trailer
                 </span>
               </button>
+              <div className="rounded-full border-2 border-white flex items-center justify-center w-11 h-11 cursor-pointer bg-black/60 ">
+                <PlusIcon className="h-6" />
+              </div>
+              <div className="rounded-full border-2 border-white flex items-center justify-center w-11 h-11 cursor-pointer bg-black/60 ">
+                <img src="/images/group-icon.svg" alt="" />
+              </div>
             </div>
+
+            <p className="text-xs md:text-sm ">{}</p>
           </div>
         </section>
       )}
