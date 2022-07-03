@@ -1,4 +1,4 @@
-import { PlusIcon } from '@heroicons/react/solid';
+import { PlusIcon, XIcon } from '@heroicons/react/solid';
 import Head from 'next/head';
 import Image from 'next/image';
 import React, { useState } from 'react';
@@ -75,6 +75,22 @@ function Movie({ result }) {
               {result.genres.map((g) => g.name + ' ')}
             </p>
             <h4 className="text-sm md:text-lg max-w-4xl">{result.overview}</h4>
+          </div>
+
+          {showPlayer && (
+            <div className="w-full h-full bg-black absolute z-50 inset-0 opacity-50  " />
+          )}
+          <div
+            className={`absolute top-3 inset-x-[7%] md:inset-x-[13%] rounded overflow-hidden transition duration-1000 ${
+              showPlayer ? 'opacity-100 z-50' : 'opacity-0'
+            } `}
+          >
+            <div className="flex items-center justify-between bg-black text-[#f9f9f9] p-3.5 ">
+              <span className="font-semibold">Play Trailer</span>
+              <div className=" flex items-center justify-center rounded-lg opacity-50 cursor-pointer hover:opacity-75 hover:bg-[#0f0f0f] ">
+                <XIcon className="h-8 w-8 " />
+              </div>
+            </div>
           </div>
         </section>
       )}
