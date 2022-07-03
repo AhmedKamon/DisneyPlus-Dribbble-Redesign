@@ -2,6 +2,7 @@ import { PlusIcon, XIcon } from '@heroicons/react/solid';
 import Head from 'next/head';
 import Image from 'next/image';
 import React, { useState } from 'react';
+import ReactPlayer from 'react-player';
 import Header from '../../components/Header';
 import Hero from '../../components/Hero';
 
@@ -87,9 +88,22 @@ function Movie({ result }) {
           >
             <div className="flex items-center justify-between bg-black text-[#f9f9f9] p-3.5 ">
               <span className="font-semibold">Play Trailer</span>
-              <div className=" flex items-center justify-center rounded-lg opacity-50 cursor-pointer hover:opacity-75 hover:bg-[#0f0f0f] ">
+              <div
+                className=" flex items-center justify-center rounded-lg opacity-50 cursor-pointer hover:opacity-75 hover:bg-[#0f0f0f] "
+                onClick={() => setShowPlayer(false)}
+              >
                 <XIcon className="h-8 w-8 " />
               </div>
+            </div>
+            <div className=" relative  ">
+              <ReactPlayer
+                width="100%"
+                height="100%"
+                className="top-0 left-0 absolute"
+                url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
+                controls={true}
+                // playing={showPlayer}
+              />
             </div>
           </div>
         </section>
