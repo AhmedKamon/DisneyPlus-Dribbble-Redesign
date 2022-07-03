@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import React from 'react'
 
 function MovieThumbnail({result}) {
+  console.log(result,'sh');
     const BASE_URL = "https://image.tmdb.org/t/p/original/"
     const router = useRouter()
   return (
