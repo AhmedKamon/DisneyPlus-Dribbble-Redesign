@@ -1,5 +1,5 @@
 import React from 'react'
-import MovieThumbnail from './MovieThumbnail'
+import ShowsThumbnail from './ShowsThumbnail'
 
 function ShowsCollection({results, title}) {
   console.log(results);
@@ -10,7 +10,7 @@ function ShowsCollection({results, title}) {
     
           {
             results.map((result) => (
-              <MovieThumbnail result={result} key={result.id} />
+              <ShowsThumbnail result={result} key={result.id} />
               ))
             }
             </div>
